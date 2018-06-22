@@ -1,0 +1,11 @@
+#!/usr/bin/osascript
+
+tell application "Google Chrome"
+     set tabcount to number of tabs in front window
+     set current_tab_index to get active tab index of front window
+     if current_tab_index equal to tabcount
+	set (active tab index of first window) to 1
+     else
+	set (active tab index of first window) to current_tab_index + 1
+     end if
+end tell
